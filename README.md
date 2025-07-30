@@ -1,9 +1,10 @@
 # AI-Detection-Model
 This project is meant to be deployed at construction sites to detect people without helmets on
+You can watch an in depth version of this README through this link: https://youtu.be/QXcILDvQxHk
 
   #### NEEDED SOFTWARE:
       - Python
-      - jetson-inference
+      - jetson-inference (https://github.com/dusty-nv/jetson-inference)
   #### USED DATASETS
   I used the OpenImages datasets for helmets and people to get the model to detect both people and helmets
 
