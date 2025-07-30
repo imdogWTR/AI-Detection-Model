@@ -1,6 +1,5 @@
 # AI-Detection-Model
-  #### How to Run the Detection Software for Helmets and People:
-      This project is meant to be deployed at construction sites to detect people without helmets on
+This project is meant to be deployed at construction sites to detect people without helmets on
 
   #### NEEDED SOFTWARE:
       - jetson-inference (https://github.com/dusty-nv/jetson-inference)
