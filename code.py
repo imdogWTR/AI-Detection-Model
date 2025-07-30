@@ -10,16 +10,19 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Helmet Detection using a Custom Model")
 
-parser.argparse.add_argument("input_filename", type=str, help="Path to the input image")
-parser.argparse.add_argument("output_filename", type=str, help="Path to save the output image")
+parser.add_argument("input_filename", type=str, help="Path to the input image")
+parser.add_argument("output_filename", type=str, help="Path to save the output image")
+
+opt = parser.parse_args()
 
 
 
 img = jetson_utils.loadImage(opt.input_filename)
 
 net = jetson_inference.detectNet(
-    model = "AI-DETECTION-MODEL/detection-model/helmet-model/ssd-mobilenet.onnx",
-    labels = "AI-DETECTION-MODEL/detection-model/helmet-model/labels.txt",
+    network = "ssd-mobilenet-v1",
+    model = "AI-Detection-Model/helmet-model/ssd-mobilenet.onnx",
+    labels = "AI-Detection-Model/helmet-model/labels.txt",
     input_blob = "input_0",
     output_cvg = "scores",
     output_bbox = "boxes",
